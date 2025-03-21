@@ -7715,11 +7715,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\uMarket.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\uMarket.csproj",
       "projectName": "uMarket",
-      "projectPath": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\uMarket.csproj",
+      "projectPath": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\uMarket.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\obj\\",
+      "outputPath": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7752,7 +7752,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -7804,7 +7804,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
