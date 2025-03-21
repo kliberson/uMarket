@@ -24,9 +24,9 @@ namespace uMarket.Controllers
         }
 
         // GET: Users
-        public async  Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _userRepository.GetAll().ToListAsync());
+            return View(_userRepository.GetAll().ToList());
         }
 
         // GET: Users/Create
