@@ -22,10 +22,10 @@ namespace uMarket.Data
             modelBuilder.Entity<Category>().ToTable("Categories");
 
             modelBuilder.Entity<Order>()
-            .HasOne(o => o.Buyer) // Relacja do kupującego (User)
+            .HasOne(o => o.User) // Relacja do kupującego (User)
             .WithMany() // Nie ma kolekcji w User
-            .HasForeignKey(o => o.BuyerId) // Klucz obcy do Usera
-            .OnDelete(DeleteBehavior.Cascade); // Kaskadowe usuwanie dla BuyerId
+            .HasForeignKey(o => o.UserId) // Klucz obcy do Usera
+            .OnDelete(DeleteBehavior.Cascade); // Kaskadowe usuwanie dla UserId
 
             modelBuilder.Entity<Order>()
             .HasOne(o => o.Listing) // Relacja do ogłoszenia

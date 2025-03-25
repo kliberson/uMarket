@@ -47,7 +47,7 @@ namespace uMarket.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ListingId"));
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -63,18 +63,18 @@ namespace uMarket.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("SellerId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("ListingId");
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("SellerId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Listings", (string)null);
                 });
@@ -87,13 +87,7 @@ namespace uMarket.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
 
-                    b.Property<int>("BuyerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ListingId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ListingId1")
+                    b.Property<int?>("ListingId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("OrderedAt")
@@ -102,17 +96,16 @@ namespace uMarket.Migrations
                     b.Property<int?>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("OrderId");
+                    b.Property<int?>("UserId1")
+                        .HasColumnType("int");
 
-                    b.HasIndex("BuyerId");
+                    b.HasKey("OrderId");
 
                     b.HasIndex("ListingId");
 
-                    b.HasIndex("ListingId1")
-                        .IsUnique()
-                        .HasFilter("[ListingId1] IS NOT NULL");
-
                     b.HasIndex("UserId");
+
+                    b.HasIndex("UserId1");
 
                     b.ToTable("Orders", (string)null);
                 });
@@ -153,57 +146,41 @@ namespace uMarket.Migrations
                 {
                     b.HasOne("uMarket.Models.Category", "Category")
                         .WithMany("Listings")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
-                    b.HasOne("uMarket.Models.User", "Seller")
+                    b.HasOne("uMarket.Models.User", "User")
                         .WithMany("Listings")
-                        .HasForeignKey("SellerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Category");
 
-                    b.Navigation("Seller");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("uMarket.Models.Order", b =>
                 {
-                    b.HasOne("uMarket.Models.User", "Buyer")
-                        .WithMany()
-                        .HasForeignKey("BuyerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("uMarket.Models.Listing", "Listing")
                         .WithMany()
                         .HasForeignKey("ListingId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
-                    b.HasOne("uMarket.Models.Listing", null)
-                        .WithOne("Order")
-                        .HasForeignKey("uMarket.Models.Order", "ListingId1");
+                    b.HasOne("uMarket.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("uMarket.Models.User", null)
                         .WithMany("Orders")
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("Buyer");
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Listing");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("uMarket.Models.Category", b =>
                 {
                     b.Navigation("Listings");
-                });
-
-            modelBuilder.Entity("uMarket.Models.Listing", b =>
-                {
-                    b.Navigation("Order")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("uMarket.Models.User", b =>

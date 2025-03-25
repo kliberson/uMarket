@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace uMarket.Migrations
 {
     /// <inheritdoc />
-    public partial class uMarket : Migration
+    public partial class ostatniapoprawa : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -47,8 +47,8 @@ namespace uMarket.Migrations
                 {
                     ListingId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SellerId = table.Column<int>(type: "int", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: true),
+                    CategoryId = table.Column<int>(type: "int", nullable: true),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -62,14 +62,12 @@ namespace uMarket.Migrations
                         name: "FK_Listings_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
-                        principalColumn: "CategoryId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "CategoryId");
                     table.ForeignKey(
-                        name: "FK_Listings_Users_SellerId",
-                        column: x => x.SellerId,
+                        name: "FK_Listings_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserId");
                 });
 
             migrationBuilder.CreateTable(
@@ -78,11 +76,10 @@ namespace uMarket.Migrations
                 {
                     OrderId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BuyerId = table.Column<int>(type: "int", nullable: false),
-                    ListingId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: true),
+                    ListingId = table.Column<int>(type: "int", nullable: true),
                     OrderedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ListingId1 = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    UserId1 = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -93,19 +90,14 @@ namespace uMarket.Migrations
                         principalTable: "Listings",
                         principalColumn: "ListingId");
                     table.ForeignKey(
-                        name: "FK_Orders_Listings_ListingId1",
-                        column: x => x.ListingId1,
-                        principalTable: "Listings",
-                        principalColumn: "ListingId");
-                    table.ForeignKey(
-                        name: "FK_Orders_Users_BuyerId",
-                        column: x => x.BuyerId,
+                        name: "FK_Orders_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Orders_Users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Orders_Users_UserId1",
+                        column: x => x.UserId1,
                         principalTable: "Users",
                         principalColumn: "UserId");
                 });
@@ -116,14 +108,9 @@ namespace uMarket.Migrations
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Listings_SellerId",
+                name: "IX_Listings_UserId",
                 table: "Listings",
-                column: "SellerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Orders_BuyerId",
-                table: "Orders",
-                column: "BuyerId");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_ListingId",
@@ -131,16 +118,14 @@ namespace uMarket.Migrations
                 column: "ListingId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_ListingId1",
-                table: "Orders",
-                column: "ListingId1",
-                unique: true,
-                filter: "[ListingId1] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Orders_UserId",
                 table: "Orders",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_UserId1",
+                table: "Orders",
+                column: "UserId1");
         }
 
         /// <inheritdoc />
