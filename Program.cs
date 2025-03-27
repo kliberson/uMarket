@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using uMarket.Data;
 using uMarket.Models;
 using uMarket.Repository;
+using uMarket.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,11 +11,16 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MarketContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// repisitories 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-// dodane ostatnio
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IListingRepository, ListingRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+//services layer
+
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 var app = builder.Build();
 

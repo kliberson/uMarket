@@ -1,33 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using uMarket.Data;
 using uMarket.Models;
-using uMarket.Repository;
-
+using uMarket.Services;
 
 namespace uMarket.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly MarketContext _context;
+        private readonly IUserService _userService;
 
-        private readonly IUserRepository _userRepository;
-        public UsersController(IUserRepository userRepository, MarketContext context)
+        public UsersController(IUserService userService)
         {
-            _userRepository = userRepository;
-            _context = context;
+            _userService = userService;
         }
 
         // GET: Users
-        public IActionResult Index()
+        public IActionResult Index(string searchQuery, int page = 1, int pageSize = 10)
         {
-            return View(_userRepository.GetAll().ToList());
+            var model = _userService.GetPaginatedUsers(searchQuery, page, pageSize);
+
+            ViewData["SearchQuery"] = searchQuery;
+            return View(model); 
         }
+
 
         // GET: Users/Create
         public IActionResult Create()
@@ -41,14 +37,13 @@ namespace uMarket.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _userRepository.InsertAsync(user);
-                await _userRepository.SaveAsync();
+                await _userService.AddUserAsync(user);
                 return RedirectToAction(nameof(Index));
             }
             return View(user);
         }
 
-        //Edit
+        // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -56,7 +51,7 @@ namespace uMarket.Controllers
                 return NotFound();
             }
 
-            var user = await _userRepository.GetByIdAsync(Convert.ToInt32(id));
+            var user = await _userService.GetUserByIdAsync(id.Value);
             if (user == null)
             {
                 return NotFound();
@@ -75,24 +70,22 @@ namespace uMarket.Controllers
 
             if (ModelState.IsValid)
             {
-                await _userRepository.UpdateAsync(user);
-                await _userRepository.SaveAsync();
+                await _userService.UpdateUserAsync(user);
                 return RedirectToAction(nameof(Index));
             }
 
             return View(user);
         }
 
-
-        //Delete
+        // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)
-            {
+        {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var user = await _userRepository.GetByIdAsync(Convert.ToInt32(id));
+            var user = await _userService.GetUserByIdAsync(id.Value);
             if (user == null)
             {
                 return NotFound();
@@ -105,12 +98,7 @@ namespace uMarket.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var user = await _userRepository.GetByIdAsync(Convert.ToInt32(id));
-            if (user != null)
-            {
-                await _userRepository.DeleteAsync(id);
-                await _userRepository.SaveAsync();
-            }
+            await _userService.DeleteUserAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }

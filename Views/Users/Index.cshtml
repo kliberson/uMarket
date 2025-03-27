@@ -1,10 +1,139 @@
-﻿@model IEnumerable<uMarket.Models.User>
+﻿@model uMarket.Models.PaginatedList<uMarket.Models.User>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Users";
 }
 
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .pagination a {
+        padding: 10px 15px;
+        margin: 0 5px;
+        text-decoration: none;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .pagination a:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+    /* Stylizacja dla aktywnej strony (kliknięta strona) */
+    .pagination a.active {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Stylizacja dla strzałek nawigacyjnych (np. "poprzednia" i "następna") */
+    .pagination .prev, .pagination .next {
+        padding: 10px 15px;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .pagination .prev:hover, .pagination .next:hover {
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Dodajemy zmniejszenie strzałek */
+    .pagination .prev, .pagination .next {
+        padding: 10px 12px;
+    }
+
+    /* Układ strzałek */
+    .pagination .prev {
+        margin-right: 10px;
+    }
+
+    .pagination .next {
+        margin-left: 10px;
+    }
+</style>
 <h1>Users</h1>
+
+<!-- formularz do filtrowania -->
+<form method="get">
+    <div class="form-group">
+        <label for="searchQuery"></label>
+        <input type="text" id="searchQuery" name="searchQuery" class="form-control" value="@ViewData["SearchQuery"]" 
+        placeholder="Search anything you want to search" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<br />
+
+<!-- wyświetlanie-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Items.First().Username)</th>
+            <th>@Html.DisplayNameFor(model => model.Items.First().Email)</th>
+            <th>@Html.DisplayNameFor(model => model.Items.First().PhoneNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.Items.First().Address)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Username)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Paginacja -->
+<div class="pagination">
+    @if (Model.PageNumber > 1)
+    {
+        <a href="?page=@(Model.PageNumber - 1)&searchQuery=@ViewData["SearchQuery"]" class="prev">&laquo; Prev</a>
+    }
+    else
+    {
+        <span class="prev disabled">&laquo; Prev</span>
+    }
+
+    @for (var i = 1; i <= Model.TotalPages; i++)
+    {
+        <a href="?page=@i&searchQuery=@ViewData["SearchQuery"]" class="@(i == Model.PageNumber ? "active" : "")">@i</a>
+    }
+
+    @if (Model.PageNumber < Model.TotalPages)
+    {
+        <a href="?page=@(Model.PageNumber + 1)&searchQuery=@ViewData["SearchQuery"]" class="next">Next &raquo;</a>
+    }
+    else
+    {
+        <span class="next disabled">Next &raquo;</span>
+    }
+</div>
+@* <h1>Users</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -50,10 +179,10 @@
                     @Html.DisplayFor(modelItem => item.Address)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> 
+                    <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a>
                     <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
-</table>
+</table> *@

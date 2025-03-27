@@ -15,7 +15,7 @@ namespace uMarket.Repository
 
         public IQueryable<User> GetAll()
         {
-            return _context.Users; 
+            return _context.Users.AsQueryable();
         }
 
         public async Task<User?> GetByIdAsync(int UserID)
