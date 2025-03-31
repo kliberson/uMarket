@@ -3,6 +3,7 @@ using System;
 using System.Threading.Tasks;
 using uMarket.Models;
 using uMarket.Services;
+using uMarket.ViewModels;
 
 namespace uMarket.Controllers
 {
@@ -19,9 +20,8 @@ namespace uMarket.Controllers
         public IActionResult Index(string searchQuery, int page = 1, int pageSize = 10)
         {
             var model = _userService.GetPaginatedUsers(searchQuery, page, pageSize);
-
             ViewData["SearchQuery"] = searchQuery;
-            return View(model); 
+            return View(model);
         }
 
 

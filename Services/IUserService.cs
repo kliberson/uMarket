@@ -1,5 +1,6 @@
 ﻿using uMarket.Models;
 using uMarket.Repository;
+using uMarket.ViewModels;
 
 namespace uMarket.Services
 {
@@ -14,7 +15,7 @@ namespace uMarket.Services
         //filtrowanie
         IQueryable<User> FilterUsers(string searchQuery);
         //paginacja
-        PaginatedList<User> GetPaginatedUsers(string searchQuery, int page, int pageSize);
+        PaginatedList<UserViewModel> GetPaginatedUsers(string searchQuery, int page, int pageSize);
         
     }
 }

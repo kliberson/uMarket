@@ -1,6 +1,7 @@
 ﻿using uMarket.Models;
 using uMarket.Repository;
 using uMarket.Services;
+using uMarket.ViewModels;
 
 public class UserService : IUserService
 {
@@ -60,23 +61,25 @@ public class UserService : IUserService
     }
 
 
-    public PaginatedList<User> GetPaginatedUsers(string searchQuery, int page = 1, int pageSize = 10)
+    public PaginatedList<UserViewModel> GetPaginatedUsers(string searchQuery, int page = 1, int pageSize = 10)
     {
         var usersQuery = FilterUsers(searchQuery);
 
+        var totalCount = usersQuery.Count();
         var users = usersQuery
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToList();
 
-        var model = new PaginatedList<User>
+        var viewModelList = users.Select(user => new UserViewModel
         {
-            Items = users,
-            TotalCount = usersQuery.Count(),  
-            PageNumber = page,
-            PageSize = pageSize
-        };
+            UserId = user.UserId,
+            Username = user.Username,
+            Email = user.Email,
+            PhoneNumber = user.PhoneNumber,
+            Address = user.Address
+        }).ToList();
 
-        return model;
+        return new PaginatedList<UserViewModel>(viewModelList, totalCount, page, pageSize);
     }
 }
