@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\uMarket.csproj": {}
+    "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\uMarket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\uMarket.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\uMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\uMarket.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\uMarket.csproj",
         "projectName": "uMarket",
-        "projectPath": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\uMarket.csproj",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\uMarket.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,12 +44,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -96,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

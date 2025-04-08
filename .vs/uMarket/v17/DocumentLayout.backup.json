@@ -1,46 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\",
+  "WorkspaceRootPath": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\models\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:models\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\6 semestr\\asp.net\\umarket\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\6 semestr\\asp.net\\umarket\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\6 semestr\\asp.net\\umarket\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\6 semestr\\asp.net\\umarket\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\studia\\6 semestr\\repos\\umarket\\models\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:models\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\6 semestr\\asp.net\\umarket\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\6 semestr\\asp.net\\umarket\\models\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:models\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|c:\\users\\lucas\\desktop\\6 semestr\\asp.net\\umarket\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F11C18B-7656-48D5-8C5D-3FCBCF0DFDA2}|uMarket.csproj|solutionrelative:viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,33 +38,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T19:17:38.054Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "Services\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Services\\IUserService.cs",
-              "RelativeToolTip": "Services\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T21:12:44.373Z",
               "EditorCaption": ""
             },
             {
@@ -89,39 +64,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Services\\IUserService.cs",
+              "RelativeToolTip": "Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T21:12:44.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Services\\UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Services\\UserService.cs",
               "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAwEkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T19:51:13.926Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "PaginatedList.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\PaginatedList.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Models\\PaginatedList.cs",
               "RelativeDocumentMoniker": "Models\\PaginatedList.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\PaginatedList.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Models\\PaginatedList.cs",
               "RelativeToolTip": "Models\\PaginatedList.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T19:39:57.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T19:39:57.923Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Controllers\\UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Controllers\\UsersController.cs*",
-              "RelativeToolTip": "Controllers\\UsersController.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T19:22:20.563Z",
               "EditorCaption": ""
@@ -130,65 +116,25 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "UserViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\ViewModels\\UserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\ViewModels\\UserViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\UserViewModel.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\ViewModels\\UserViewModel.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\ViewModels\\UserViewModel.cs",
               "RelativeToolTip": "ViewModels\\UserViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T19:28:35.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T19:28:35.876Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Views\\Users\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Views\\Users\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\6 SEMESTR\\ASP.NET\\uMarket\\Views\\Users\\Index.cshtml",
               "RelativeToolTip": "Views\\Users\\Index.cshtml",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-31T19:22:48.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T19:17:40.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Listing.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\Listing.cs",
-              "RelativeDocumentMoniker": "Models\\Listing.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\Listing.cs",
-              "RelativeToolTip": "Models\\Listing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T19:17:39.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Models\\Order.cs",
-              "ToolTip": "C:\\Users\\Lucas\\Desktop\\STUDIA\\6 SEMESTR\\repos\\uMarket\\Models\\Order.cs",
-              "RelativeToolTip": "Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T19:17:38.858Z",
               "EditorCaption": ""
             }
           ]
