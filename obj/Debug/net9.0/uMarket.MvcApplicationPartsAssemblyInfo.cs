@@ -11,13 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("uMarket")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6f71f96fb3bc773b9aa8d3b8705f9d6005b22b0")]
-[assembly: System.Reflection.AssemblyProductAttribute("uMarket")]
-[assembly: System.Reflection.AssemblyTitleAttribute("uMarket")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("FluentValidation.AspNetCore")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.
 

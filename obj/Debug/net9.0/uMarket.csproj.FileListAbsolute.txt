@@ -1348,3 +1348,7 @@ C:\Users\Lucas\Desktop\STUDIA\6 SEMESTR\repos\uMarket\obj\Debug\net9.0\uMarket.p
 C:\Users\Lucas\Desktop\STUDIA\6 SEMESTR\repos\uMarket\obj\Debug\net9.0\uMarket.genruntimeconfig.cache
 C:\Users\Lucas\Desktop\STUDIA\6 SEMESTR\repos\uMarket\obj\Debug\net9.0\ref\uMarket.dll
 C:\Users\Lucas\Desktop\6 SEMESTR\ASP.NET\uMarket\obj\Debug\net9.0\uMarket.sourcelink.json
+C:\Users\Lucas\Desktop\STUDIA\6 SEMESTR\repos\uMarket\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\Lucas\Desktop\STUDIA\6 SEMESTR\repos\uMarket\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+C:\Users\Lucas\Desktop\STUDIA\6 SEMESTR\repos\uMarket\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Lucas\Desktop\STUDIA\6 SEMESTR\repos\uMarket\obj\Debug\net9.0\uMarket.MvcApplicationPartsAssemblyInfo.cs

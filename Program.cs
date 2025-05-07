@@ -1,13 +1,18 @@
+using Microsoft.AspNetCore.Routing.Tree;
 using Microsoft.EntityFrameworkCore;
 using uMarket.Data;
-using uMarket.Models;
 using uMarket.Repository;
 using uMarket.Services;
+using uMarket.Validators;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddDbContext<MarketContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -18,8 +23,11 @@ builder.Services.AddScoped<IListingRepository, ListingRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 //services layer
-
 builder.Services.AddScoped<IUserService, UserService>();
+
+// walidacja
+builder.Services.AddFluentValidationClientsideAdapters();               // dla walidacji po stronie klienta
+builder.Services.AddValidatorsFromAssemblyContaining<UserValidator>(); // rejestruje wszystkie walidatory z tego samego assembly
 
 
 var app = builder.Build();
