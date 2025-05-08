@@ -34,6 +34,23 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Categories</a>
                         </li>
+
+                        @* TYMCZASOWO, DO WYWALENIA *@
+                        @if (User.Identity.IsAuthenticated) 
+                        {
+                            <li class="nav-item ms-auto"> 
+                                <form asp-area="Identity" asp-page="/Account/Logout" method="post">
+                                    <button type="submit" class="nav-link text-dark" style="background: none; border: none; padding: 0;">Wyloguj się</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item ms-auto">
+                                <a class="nav-link text-dark" asp-area="Identity" asp-controller="Account" asp-action="Login">Zaloguj się</a>
+                            </li>
+                        }
+                        @* TYMCZASOWO, DO WYWALENIA *@
                     </ul>
                 </div>
             </div>

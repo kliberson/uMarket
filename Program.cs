@@ -33,14 +33,15 @@ builder.Services.AddAutoMapper(typeof(UserProfile));
 builder.Services.AddDbContext<MarketContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Identity (obs³uguje logowanie, cookies, wszystko)
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
 })
 .AddEntityFrameworkStores<MarketContext>();
 
-//// Konfiguracja cookies dla Identity 
+builder.Services.AddRazorPages();
+
+// Konfiguracja cookies dla Identity 
 //builder.Services.ConfigureApplicationCookie(options =>
 //{
 //    options.LoginPath = "/Identity/Account/Login";
@@ -49,23 +50,18 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 //    options.SlidingExpiration = true;
 //});
 
-builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
+
 
 var app = builder.Build();
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
 
 //middleware pipeline
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// Authentication and Authorization middleware
 app.UseAuthentication();
 app.UseAuthorization();
+
 // Routing
 app.MapControllerRoute(
     name: "default",
