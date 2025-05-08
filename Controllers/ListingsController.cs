@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using uMarket.Repository;
 
 namespace uMarket.Controllers
 {
+    [Authorize]
     public class ListingsController : Controller
     {
         private readonly IListingRepository _listingRepository;

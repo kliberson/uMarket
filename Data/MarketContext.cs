@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using uMarket.Models;
 
 namespace uMarket.Data
 {
-    public class MarketContext : DbContext
+    public class MarketContext : IdentityDbContext<IdentityUser>
     {
         public MarketContext(DbContextOptions<MarketContext> options) : base(options) 
         { 
@@ -16,6 +18,8 @@ namespace uMarket.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Listing>().ToTable("Listings");
             modelBuilder.Entity<Order>().ToTable("Orders");

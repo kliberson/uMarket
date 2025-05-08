@@ -1,4 +1,6 @@
-﻿using uMarket.Models;
+﻿using AutoMapper;
+using uMarket.Models;
+using uMarket.Profiles;
 using uMarket.Repository;
 using uMarket.Services;
 using uMarket.ViewModels;
@@ -6,10 +8,12 @@ using uMarket.ViewModels;
 public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
+    private readonly IMapper _mapper;
 
-    public UserService(IUserRepository userRepository)
+    public UserService(IUserRepository userRepository, IMapper mapper)
     {
         _userRepository = userRepository;
+        _mapper = mapper;
     }
 
     public IQueryable<User> GetAllUsers()
@@ -71,14 +75,7 @@ public class UserService : IUserService
             .Take(pageSize)
             .ToList();
 
-        var viewModelList = users.Select(user => new UserViewModel
-        {
-            UserId = user.UserId,
-            Username = user.Username,
-            Email = user.Email,
-            PhoneNumber = user.PhoneNumber,
-            Address = user.Address
-        }).ToList();
+        var viewModelList = _mapper.Map<List<UserViewModel>>(users).ToList();
 
         return new PaginatedList<UserViewModel>(viewModelList, totalCount, page, pageSize);
     }

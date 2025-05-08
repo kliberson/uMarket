@@ -1,15 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
-using uMarket.Models; // Upewnij się, że masz poprawny namespace
+using uMarket.Models; 
 using System.Threading.Tasks;
 using uMarket.Data;
 
 namespace uMarket.Controllers
 {
+    [Authorize]
     public class CategoriesController : Controller
     {
         private readonly MarketContext _context;
-
+        
         public CategoriesController(MarketContext context)
         {
             _context = context;
