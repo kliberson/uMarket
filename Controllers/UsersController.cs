@@ -19,6 +19,7 @@ namespace uMarket.Controllers
         }
 
         // GET: Users
+        [Authorize(Policy = "Staff")]
         public IActionResult Index(string searchQuery, int page = 1, int pageSize = 10)
         {
             var model = _userService.GetPaginatedUsers(searchQuery, page, pageSize);
@@ -26,13 +27,14 @@ namespace uMarket.Controllers
             return View(model);
         }
 
-
         // GET: Users/Create
+        [Authorize(Policy = "Staff")]
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Policy = "Staff")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("UserId,Username,Email,Password,PhoneNumber,Address")] User user)
@@ -45,6 +47,7 @@ namespace uMarket.Controllers
             return View(user);
         }
 
+        [Authorize(Policy = "Staff")]
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -61,6 +64,7 @@ namespace uMarket.Controllers
             return View(user);
         }
 
+        [Authorize(Policy = "Staff")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("UserId,Username,Email,Password,PhoneNumber,Address")] User user)
@@ -79,6 +83,7 @@ namespace uMarket.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -96,6 +101,7 @@ namespace uMarket.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
