@@ -50,6 +50,12 @@
                                 <a class="nav-link text-dark" asp-area="Identity" asp-controller="Account" asp-action="Login">Zaloguj się</a>
                             </li>
                         }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Panel Admina</a>
+                            </li>
+                        }
                         @* TYMCZASOWO, DO WYWALENIA *@
                     </ul>
                 </div>
