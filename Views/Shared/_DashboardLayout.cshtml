@@ -9,11 +9,9 @@
     
     <title>@ViewData["Title"] - uMarket</title>
 
-    <!-- Custom fonts for this template-->
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <!-- Custom styles for this template-->
     <link href="~/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/uMarket.styles.css" asp-append-version="true" />
@@ -25,7 +23,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-allegro sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-area="" asp-controller="Home" asp-action="Index">
@@ -53,7 +51,6 @@
                 </a>
             </li>
 
-            <!-- Divider -->
             <!-- Divider -->
             @if (User.Identity.IsAuthenticated)
             {
@@ -100,26 +97,6 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Admin Panel (tylko dla adminów) -->
-            @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
-            {
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Administracja
-                </div>
-
-                <!-- Nav Item - Admin Panel -->
-                <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Index">
-                        <i class="fas fa-fw fa-cog"></i>
-                        <span>Panel Admina</span>
-                    </a>
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider d-none d-md-block">
-            }
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">

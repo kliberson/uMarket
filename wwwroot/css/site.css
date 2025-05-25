@@ -12,6 +12,16 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+.btn-primary {
+    background-color: #ff5a00;
+    border-color: #ff5a00;
+}
+
+.btn-primary:hover {
+    background-color: #e65300;
+    border-color: #cc4800;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -19,4 +29,10 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.bg-gradient-allegro {
+    background-color: #ff5a00;
+    background-image: linear-gradient(180deg, #ff5a00 10%, #cc4800 100%);
+    background-size: cover;
 }
