@@ -122,7 +122,7 @@ namespace uMarket.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
                     // dodawanie defaultowej roli do nowo tworzonego użytkownika
-                    //await _userManager.AddToRoleAsync(user, "Customer");
+                    await _userManager.AddToRoleAsync(user, "Customer");
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
